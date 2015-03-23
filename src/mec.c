@@ -3,7 +3,7 @@
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met: 
+ * modification, are permitted provided that the following conditions are met: 
  * 
  * 1. Redistributions of source code must retain the above copyright notice, this
  * list of conditions and the following disclaimer. 
@@ -25,16 +25,17 @@ modification, are permitted provided that the following conditions are met:
  */
 
 
+#include <R.h>
+#define PRINTFUN Rprintf
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "mec.h"
 
 
-#define PRINTFUN Rprintf
-
-
-static inline void shift_yo_bits_down(unsigned char *arr, uint32_t len)
+static inline void shift_yo_bits_down(uchar_t *arr, uint32_t len)
 {
   int i;
   
@@ -44,7 +45,7 @@ static inline void shift_yo_bits_down(unsigned char *arr, uint32_t len)
 
 
 
-static inline void shift_yo_bits_up(unsigned char *arr, uint32_t len)
+static inline void shift_yo_bits_up(uchar_t *arr, uint32_t len)
 {
   int i;
   
@@ -54,7 +55,7 @@ static inline void shift_yo_bits_up(unsigned char *arr, uint32_t len)
 
 
 
-static inline void flip_it(unsigned char *arr, uint32_t len)
+static inline void flip_it(uchar_t *arr, uint32_t len)
 {
   int c;
   
@@ -64,7 +65,7 @@ static inline void flip_it(unsigned char *arr, uint32_t len)
 
 
 
-static void and_reverse_it(unsigned char *arr, uint32_t len)
+static void and_reverse_it(uchar_t *arr, uint32_t len)
 {
   uint32_t rev;
   int c, bit;
@@ -84,7 +85,7 @@ static void and_reverse_it(unsigned char *arr, uint32_t len)
 
 
 
-void missy_elliott_crypto(unsigned char *str, int len)
+void missy_elliott_crypto(uchar_t *str, int len)
 {
   shift_yo_bits_down(str, len);
   flip_it(str, len);
@@ -93,7 +94,7 @@ void missy_elliott_crypto(unsigned char *str, int len)
 
 
 
-void missy_elliott_decrypto(unsigned char *str, uint32_t len)
+void missy_elliott_decrypto(uchar_t *str, uint32_t len)
 {
   and_reverse_it(str, len);
   flip_it(str, len);
@@ -102,7 +103,7 @@ void missy_elliott_decrypto(unsigned char *str, uint32_t len)
 
 
 
-void print_bits_of_str(unsigned char *str, uint32_t len)
+void print_bits_of_str(uchar_t *str, uint32_t len)
 {
   int c, bit;
   
@@ -121,7 +122,7 @@ int main()
 {
   char *str_literal = "asdf qwerty";
   uint32_t len = strlen(str_literal);
-  unsigned char *str;
+  uchar_t *str;
   
   str = malloc(len);
   
