@@ -24,7 +24,6 @@ modification, are permitted provided that the following conditions are met:
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-// https://github.com/tom-lord/missy_elliott
 
 #include <stdio.h>
 #include <string.h>
