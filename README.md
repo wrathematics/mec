@@ -2,14 +2,35 @@
 
 
 This implements the MECA, or [Missy Elliott Cryptography Algorithm](https://www.youtube.com/watch?v=UODX_pYpVxk).
+Specifically, if you gotta big string, lemme search it
+
+```r
+01100001
+```
+
+shift yo bits down
+
+```r
+11000010
+```
+
+flip it 
+
+```r
+00111101
+```
+
+and reverse it.
+
+```r
+10111100
+```
 
 Inspired by the Ruby project [missy_elliott](https://github.com/tom-lord/missy_elliott),
 which is itself inspired from an [ancient XKCD comic](https://xkcd.com/153/).
 
 
 ## Package Usage
-
-Shift yo bits down, flip it and reverse it.
 
 ```r
 library(mec)
