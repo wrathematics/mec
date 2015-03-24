@@ -47,6 +47,14 @@ enc
 dec <- decode(enc)
 dec
 # [1] "abc"
+
+encode(letters)
+#      a      b      c      d      e      f      g      h      i      j      k 
+# "\xbc" "\xdc" "\x9c" "\xec" "\xac" "\xcc" "\x8c" "\xf4" "\xb4" "\xd4" "\x94" 
+#      l      m      n      o      p      q      r      s      t      u      v 
+# "\xe4" "\xa4" "\xc4" "\x84" "\xf8" "\xb8" "\xd8" "\x98" "\xe8" "\xa8" "\xc8" 
+#      w      x      y      z 
+# "\x88" "\xf0" "\xb0" "\xd0" 
 ```
 
 There is also a utility you can use to convince yourself that
