@@ -5,6 +5,7 @@ This implements the MECA, or [Missy Elliott Cryptography Algorithm](https://www.
 Specifically, if you gotta big string, lemme search it
 
 ```r
+> mec::bitprint("a")
 01100001
 ```
 
