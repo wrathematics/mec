@@ -1,7 +1,12 @@
-# Missy Elliott Croptography [![Build Status](https://travis-ci.org/wrathematics/mec.png)](https://travis-ci.org/wrathematics/mec) [![License](http://img.shields.io/badge/license-BSD%202--Clause-orange.svg?style=flat)](http://opensource.org/licenses/BSD-2-Clause)
+# Missy Elliott Croptography 
+
+* **Version:** 0.1
+* **Status:** [![Build Status](https://travis-ci.org/wrathematics/mec.png)](https://travis-ci.org/wrathematics/mec
+* **License:** [![License](http://img.shields.io/badge/license-BSD%202--Clause-orange.svg?style=flat)](http://opensource.org/licenses/BSD-2-Clause)
+* **Author:** Drew Schmidt
 
 
-This implements the MECA, or [Missy Elliott Cryptography Algorithm](https://www.youtube.com/watch?v=UODX_pYpVxk).
+This package implements the MECA, or [Missy Elliott Cryptography Algorithm](https://www.youtube.com/watch?v=UODX_pYpVxk).
 Specifically, if you gotta big string, lemme search it
 
 ```r
